@@ -43,3 +43,13 @@ label{
 input{
     flex: auto;
 }
+
+@media only screen and (max-width :360px){
+    div{
+        border : 3px solid black;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
