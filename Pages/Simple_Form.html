@@ -93,12 +93,23 @@
             }
         });
 
+        const pwd = document.querySelector('#pwd');
+        const pwdError = document.querySelector('.pwd-error');
+        pwd.addEventListener('blur', function () {
+            let pwdRegex = RegExp('^[a-zA-Z0-9!@#$%^&*]{8,}$');
+            if (pwdRegex.test(pwd.value)) {
+                pwdError.textContent = "";
+            } else {
+                pwdError.textContent = "Password is incorrect";
+            }
+        });
+
         const salary = document.querySelector('#salary');
         const output = document.querySelector('.salary-output');
         output.textContent = salary.value;
         salary.addEventListener('input', function () {
             output.textContent = salary.value;
-        })
+        });
         </script>
 </body>
 </html>
